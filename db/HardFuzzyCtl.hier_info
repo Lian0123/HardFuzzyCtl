@@ -1,0 +1,44 @@
+|FuzzyMapping
+InFixed[0] => Add0.IN8
+InFixed[0] => LessThan0.IN8
+InFixed[0] => LessThan3.IN16
+InFixed[0] => LessThan4.IN16
+InFixed[0] => Add1.IN14
+InFixed[0] => LessThan15.IN16
+InFixed[0] => LessThan16.IN16
+InFixed[0] => LessThan17.IN16
+InFixed[0] => LessThan18.IN16
+InFixed[0] => Add7.IN35
+InFixed[1] => Add0.IN7
+InFixed[1] => LessThan0.IN7
+InFixed[1] => LessThan3.IN15
+InFixed[1] => LessThan4.IN15
+InFixed[1] => Add1.IN13
+InFixed[1] => LessThan15.IN15
+InFixed[1] => LessThan16.IN15
+InFixed[1] => LessThan17.IN15
+InFixed[1] => LessThan18.IN15
+InFixed[1] => Add7.IN34
+InFixed[2] => Add0.IN5
+InFixed[2] => Add0.IN6
+InFixed[2] => LessThan0.IN6
+InFixed[3] => Add0.IN3
+InFixed[3] => Add0.IN4
+InFixed[3] => LessThan0.IN5
+IsHit <= <VCC>
+LoaclFlag[0] <= always0.DB_MAX_OUTPUT_PORT_TYPE
+LoaclFlag[1] <= always0.DB_MAX_OUTPUT_PORT_TYPE
+LoaclFlag[2] <= always0.DB_MAX_OUTPUT_PORT_TYPE
+LongBitData[0] <= LongBitData.DB_MAX_OUTPUT_PORT_TYPE
+LongBitData[1] <= LongBitData.DB_MAX_OUTPUT_PORT_TYPE
+LongBitData[2] <= LongBitData.DB_MAX_OUTPUT_PORT_TYPE
+LongBitData[3] <= LongBitData.DB_MAX_OUTPUT_PORT_TYPE
+LongBitData[4] <= LongBitData.DB_MAX_OUTPUT_PORT_TYPE
+LongBitData[5] <= LongBitData.DB_MAX_OUTPUT_PORT_TYPE
+LongBitData[6] <= LongBitData.DB_MAX_OUTPUT_PORT_TYPE
+LongBitData[7] <= LongBitData.DB_MAX_OUTPUT_PORT_TYPE
+LongBitData[8] <= LongBitData.DB_MAX_OUTPUT_PORT_TYPE
+LongBitData[9] <= LongBitData.DB_MAX_OUTPUT_PORT_TYPE
+ErrorReturn <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+

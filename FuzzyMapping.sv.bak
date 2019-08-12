@@ -1,0 +1,80 @@
+module FuzzyMapping(cut_line,x,y,z);
+	parameter LongBits_limit = 10               ; // Sum Of The Data Bit
+
+   //==========================================================================================================
+	// Define Type
+	//==========================================================================================================
+	//==========================================================================================================
+	// Value
+	//==========================================================================================================
+	int i = 0;
+	int j = 0;
+	
+	int Tmp = 0;
+	//==========================================================================================================
+	// PinData
+	//==========================================================================================================
+	input  TriggerPin;
+	input  BitSum X;
+		
+	output [9:0] LongBitDataA;
+	output [9:0] LongBitDataB;
+	output [9:0] LongBitDataC;
+	output [2:0] Output;
+	output [2:0] ErrorReturn;
+	//==========================================================================================================
+	// Usr Define Value
+	//==========================================================================================================
+
+	//==========================================================================================================
+	// Usr Define Function
+	//==========================================================================================================
+	function [9:0]GetLongBitData(int DataSum,int RangeSum);
+		if(RangeSum < 1)
+			GetLongBitData = 10'b1111111111;
+		else
+			for(j = 0,k = 0; j < LongBit_limit; j=j+1,k=k+1) begin
+				if(DataSum-RangeSum>=0)
+					GetLongBitData[k] = 1;
+				else
+					GetLongBitData[k] = 0;
+					
+				DataSum = DataSum-RangeSum;
+			end
+		return GetLongBitData;
+	endfunction
+	//==========================================================================================================
+	// Event
+	//==========================================================================================================
+	always_comb	begin
+		LongBitDataA = 10'b0000000000;
+		LongBitDataB = 10'b0000000000;
+		LongBitDataC = 10'b0000000000;
+		for (i = 0; i < 4; i = i + 1) begin
+			//OutRange Test
+			if(Tmp < FN[0] || Tmp > FN[3]) begin
+				ErrorReturn[0] = 1;
+				break;
+			end
+			
+			//UpPart Mapping Test
+			if(FN[0] <= Tmp && Tmp <= FN[1]) begin
+				Output[2] = 1;
+				LongBitDataA = GetLongBitData(Tmp-FN[0],(FN[1]-FN[0])/LongBit_limit);
+			end
+			
+			//CorePart Mapping Test
+			if(FN[1] <= Tmp && Tmp <= FN[2]) begin
+				Output[1] = 1;
+				LongBitDataA = GetLongBitData(LongBit_limit,1);
+			end
+			
+			//DownPart Mapping Test
+			if(FN[2] <= Tmp && Tmp <= FN[3]) begin
+				Output[0] = 1;
+				LongBitDataC = GetLongBitData(FN[3]-Tmp,(FN[3]-FN[2])/LongBit_limit);
+			end
+			
+		end
+	end
+endmodule 

@@ -1,0 +1,107 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+
+// DATE "07/28/2019 14:48:10"
+
+// 
+// Device: Altera 5CGXBC5C7F27C8 Package FBGA672
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module HardFuzzyCtl (
+	TriggerPin,
+	TestOut);
+input 	TriggerPin;
+output 	TestOut;
+
+// Design Ports Information
+// TriggerPin	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// TestOut	=>  Location: PIN_A9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \TriggerPin~input_o ;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+
+
+// Location: IOOBUF_X48_Y61_N93
+cyclonev_io_obuf \TestOut~output (
+	.i(vcc),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(TestOut),
+	.obar());
+// synopsys translate_off
+defparam \TestOut~output .bus_hold = "false";
+defparam \TestOut~output .open_drain_output = "false";
+defparam \TestOut~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X48_Y61_N75
+cyclonev_io_ibuf \TriggerPin~input (
+	.i(TriggerPin),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\TriggerPin~input_o ));
+// synopsys translate_off
+defparam \TriggerPin~input .bus_hold = "false";
+defparam \TriggerPin~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y27_N0
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule

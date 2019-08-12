@@ -1,0 +1,24 @@
+module SensorGet(SensorGetValue, FixedValue, ErrorReturn);
+	//==========================================================================================================
+	// Base Value
+	//==========================================================================================================
+	parameter SensorGet_LimitBit =  10  ; // Limit     Bit
+	parameter BaseBound_limit    =  10  ; // Limit     Bit
+	parameter BaseUpBound        =  511 ; // UpBound   Number
+	parameter BaseDownBound      = -512 ; // DownBound Number
+	parameter ShiftVlaue         =  10  ; // Offset    Number
+	
+	//==========================================================================================================
+	// PinData
+	//==========================================================================================================
+   input     SensorGetValue[SensorGet_LimitBit - 1 : 0]; //
+	input     BaseBoundValue[BaseBound_limit    - 1 : 0]; //
+	output    OutRange[SensorGet_LimitBit       - 1 : 0]; //
+	
+	//==========================================================================================================
+	// Event
+	//==========================================================================================================
+   always_comb begin
+		
+	end
+endmodule

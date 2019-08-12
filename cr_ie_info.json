@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "linux64",
+		"os_name" : "Arch Linux",
+		"os_version" : ""
+	},
+	"error" : {
+		"executable" : "quartus",
+		"comment" : "not_applicable",
+		"error_message" : "Unreachable case.",
+		"source_file" : "/quartus/edt/wedtq/wedtq_modes.cpp",
+		"line" : "2764",
+		"stack_trace" : "\t0x7f2a9edb6db2: edt_wedtq + 0x89db2 (_ZN20WEDTQ_SELECTION_MODE20move_selected_glyphsEP11WEDTQ_GLYPH + 0x142)\n\t0x7f2a9edd6f2c: edt_wedtq + 0xa9f2c (_ZN20WEDTQ_SELECTION_MODE16on_l_button_downEP11QMouseEventRK6QPointP11WEDTQ_GLYPH + 0xce)\n\t0x7f2a9ed93e7b: edt_wedtq + 0x66e7b (_ZN19WEDTQ_WAVEFORM_VIEW15mousePressEventEP11QMouseEvent + 0xc9)\n\t0x7f2b15c7c37b: QtGui.so.4 + 0x26337b (_ZN7QWidget5eventEP6QEvent + 0x46b)\n\t0x7f2b15c1de4f: QtGui.so.4 + 0x204e4f (_ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent + 0xaf)\n\t0x7f2b15c246d3: QtGui.so.4 + 0x20b6d3 (_ZN12QApplication6notifyEP7QObjectP6QEvent + 0x3b3)\n\t0x7f2b3c7215b4: QtCore.so.4 + 0x1a65b4 (_ZN16QCoreApplication14notifyInternalEP7QObjectP6QEvent + 0x84)\n\t0x7f2b15c210c5: QtGui.so.4 + 0x2080c5 (_ZN19QApplicationPrivate14sendMouseEventEP7QWidgetP11QMouseEventS1_S1_PS1_R8QPointerIS0_Eb + 0x135)\n\t0x7f2b15ca4c89: QtGui.so.4 + 0x28bc89\n\t0x7f2b15ca3993: QtGui.so.4 + 0x28a993 (_ZN12QApplication15x11ProcessEventEP7_XEvent + 0xe03)\n\t0x7f2b15cced32: QtGui.so.4 + 0x2b5d32\n\t0x7f2b0fafbcf4: glib-2.0.so.0 + 0x68cf4 (g_main_context_dispatch + 0x294)\n\t0x7f2b0fafdb11: glib-2.0.so.0 + 0x6ab11\n\t0x7f2b0fafdb51: glib-2.0.so.0 + 0x6ab51 (g_main_context_iteration + 0x31)\n\t0x7f2b3c754505: QtCore.so.4 + 0x1d9505 (_ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE + 0x65)\n\t0x7f2b15cce87f: QtGui.so.4 + 0x2b587f\n\t0x7f2b3c7205c5: QtCore.so.4 + 0x1a55c5 (_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE + 0x35)\n\t0x7f2b3c720998: QtCore.so.4 + 0x1a5998 (_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE + 0x128)\n\t0x7f2b3c7257c4: QtCore.so.4 + 0x1aa7c4 (_ZN16QCoreApplication4execEv + 0xb4)\n\t   0x401ea8: quartus + 0x1ea8 (_Z8qgq_mainiPPKc + 0x68)\n\t0x7f2b1b53c720: ccl_msg + 0x40720 (_Z15msg_main_threadPv + 0x10)\n\t0x7f2b1888e02c: ccl_thr + 0x602c (thr_final_wrapper + 0xc)\n\t0x7f2b1b53c7df: ccl_msg + 0x407df (_Z18msg_thread_wrapperPFPvS_ES_ + 0x62)\n\t0x7f2b18f01559: ccl_mem + 0xa559 (_Z18mem_thread_wrapperPFPvS_ES_ + 0x99)\n\t0x7f2b18ccef92: ccl_err + 0x8f92 (_Z18err_thread_wrapperPFPvS_ES_ + 0x27)\n\t0x7f2b1888e3f2: ccl_thr + 0x63f2 (thr_thread_wrapper + 0x15)\n\t0x7f2b1b53e7e2: ccl_msg + 0x427e2 (_Z12msg_exe_mainiPPKcPFiiS1_E + 0xa3)\n\t   0x401f7a: quartus + 0x1f7a (main + 0x26)\n\t0x7f2b106ebee3: c.so.6 + 0x26ee3 (__libc_start_main + 0xf3)\n\t   0x401d59: quartus + 0x1d59\n",
+		"subsystem" : "WEDTQ"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "18.1.0",
+		"build" : "625",
+		"edition" : "Lite Edition"
+	}
+}

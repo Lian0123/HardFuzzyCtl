@@ -1,0 +1,44 @@
+$comment
+	File created using the following command:
+		vcd file HardFuzzyCtl.msim.vcd -direction
+$end
+$date
+	Sun Jul 28 14:48:19 2019
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module HardFuzzyCtl_vlg_vec_tst $end
+$var reg 1 ! TriggerPin $end
+$var wire 1 " TestOut $end
+
+$scope module i1 $end
+$var wire 1 # gnd $end
+$var wire 1 $ vcc $end
+$var wire 1 % unknown $end
+$var tri1 1 & devclrn $end
+$var tri1 1 ' devpor $end
+$var tri1 1 ( devoe $end
+$var wire 1 ) TriggerPin~input_o $end
+$var wire 1 * ~QUARTUS_CREATED_GND~I_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+0#
+1$
+x%
+1&
+1'
+1(
+0)
+0*
+$end
+#1000000

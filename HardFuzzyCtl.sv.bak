@@ -1,0 +1,112 @@
+module HardFuzzyCtl(TriggerPin,TestOut);
+	//==========================================================================================================
+	// Base Value
+	//==========================================================================================================
+	local parameter SensorGet_LimitBit;      //感測器資料上限
+
+   local parameter VerticalSet_LimitBit;    //垂直軸資訊
+										
+	local parameter HorizontalSet_LimitBit;  //水平軸單位值
+	
+	local parameter FuzzyNumberDim_LimitBit; //垂直軸單位值
+
+	local parameter MumbershipFunctionSum;   //隸屬函數總量
+
+   local parameter FuzzyNumberIDSum;        //模糊數總數
+
+   local parameter FuzzyNumberMapping_Opt;  //模糊數總
+
+   local parameter FastDownDimSum;          //模糊數總數
+
+	//==========================================================================================================
+	// PinData
+	//==========================================================================================================
+   input TriggerPin;  //Enable Pin
+ 
+   output Testout;
+ 
+   //output [11 : 0]ErrorList; //錯誤資訊列表
+	  
+
+   //==========================================================================================================
+	// Usr Define Value
+	//==========================================================================================================
+
+   //Parameter Of Mumbership Function 1 
+   localparam integer MF1Sum   = 4;
+   localparam integer MF1Dim   = 1;
+   localparam integer UsrDefineMF1FN1D1Range [4 : 0]  = {0, 1, 2, 3};
+   localparam integer UsrDefineMF1FN2D1Range [4 : 0]  = {2, 3, 5, 7};
+   localparam integer UsrDefineMF1FN3D1Range [4 : 0]  = {6, 8, 10, 12};
+   localparam integer UsrDefineMF1FN4D1Range [4 : 0]  = {11, 14, 16, 20};
+               
+   localparam MF1ShiftD1           = 1'b0;
+   localparam MF1D1BaseBound_limit = 10;
+   localparam MF1D1BaseUpBound     = 10'b1111111111;
+   localparam MF1D1BaseDownBound   = 10'b0000000000;
+   localparam MF1D1ShiftVlaue      = 10'b0000000000;
+   localparam OutMF1D1FN           = 4'b0000;
+   
+   //Parameter Of Mumbership Function 2
+   localparam integer MF2Sum   = 3;
+   localparam integer MF2Dim   = 1;
+   localparam integer UsrDefineMF2FN1D1Range [4 : 0]  = {0, 2, 2, 3};
+   localparam integer UsrDefineMF2FN2D1Range [4 : 0]  = {3, 7, 9, 11};
+   localparam integer UsrDefineMF2FN3D1Range [4 : 0]  = {6, 8, 10, 12};
+
+   localparam MF2ShiftD1           = 1'b0;
+   localparam MF2D1BaseBound_limit = 10;
+   localparam MF2D1BaseUpBound     = 10'b1111111111;
+   localparam MF2D1BaseDownBound   = 10'b0000000000;
+   localparam MF2D1ShiftVlaue      = 10'b0000000000;
+   localparam OutMF2D1FN           = 3'b000;
+
+   //Parameter Of Mumbership Function 3
+   localparam integer MF3Sum = 2;
+   localparam integer MF3Dim = 2;
+   localparam  integer UsrDefineMF3FN1D1Range [4 : 0]  = {0, 2, 2, 4};
+   localparam  integer UsrDefineMF3FN1D2Range [4 : 0]  = {3, 8, 10, 12};
+   localparam  integer UsrDefineMF3FN2D1Range [4 : 0]  = {1, 2, 3, 7};
+   localparam  integer UsrDefineMF3FN2D2Range [4 : 0]  = {6, 8, 10, 12};
+
+   localparam MF3ShiftD1           = 1'b0;
+   localparam MF3ShiftD2           = 1'b0;
+   localparam MF3D1BaseBound_limit = 10;
+   localparam MF3D2BaseBound_limit = 10;
+   localparam MF3D1BaseUpBound     = 10'b1111111111;
+   localparam MF3D1BaseDownBound   = 10'b0000000000;
+   localparam MF3D2BaseUpBound     = 10'b1111111111;
+   localparam MF3D2BaseDownBound   = 10'b0000000000;
+   localparam MF3D1ShiftVlaue      = 10'b0000000000;
+   localparam MF3D2ShiftVlaue      = 10'b0000000000;
+   localparam OutMF3D1FN           = 2'b00;
+   localparam OutMF3D2FN           = 2'b00;
+	
+   //==========================================================================================================
+	// Usr Define PinData
+	//==========================================================================================================
+
+	input [SensorGet_LimitBit-1:0]UsrDefineMF1FN1D1; //FN1D1輸入資料值
+   input [SensorGet_LimitBit-1:0]UsrDefineMF1FN2D1; //FN2D1輸入資料值
+   input [SensorGet_LimitBit-1:0]UsrDefineMF1FN3D1; //FN3D1輸入資料值
+   input [SensorGet_LimitBit-1:0]UsrDefineMF1FN3D2; //FN3D2輸入資料值
+	  
+	 /*
+   //==========================================================================================================
+	// Event
+	//==========================================================================================================
+    /*
+	always_comb begin
+        ErrorList <= 12'b100000000000;
+		  
+        if (TriggerPin) begin
+				 ErrorList[2 : 0] <= 2'b11;
+        end
+		  
+    end
+	 */ 
+	 
+	always@(TriggerPin) begin
+		out = in1 & in2;
+	end
+endmodule

@@ -1,0 +1,77 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LoaclFlag[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LoaclFlag[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LoaclFlag[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LongBitData[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LongBitData[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LongBitData[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LongBitData[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LongBitData[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LongBitData[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LongBitData[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LongBitData[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LongBitData[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LongBitData[9]",
+					"strict" : false
+				},
+				{
+					"name" : "InFixed[1]",
+					"strict" : false
+				},
+				{
+					"name" : "InFixed[2]",
+					"strict" : false
+				},
+				{
+					"name" : "InFixed[3]",
+					"strict" : false
+				},
+				{
+					"name" : "InFixed[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

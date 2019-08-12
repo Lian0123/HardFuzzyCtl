@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, /home/lian/HardFuzzyCtl/HardFuzzyCtl.sv
+source_file = 1, /home/lian/HardFuzzyCtl/Waveform1.vwf
+source_file = 1, /home/lian/HardFuzzyCtl/db/HardFuzzyCtl.cbx.xml
+design_name = HardFuzzyCtl
+instance = comp, \TestOut~output , TestOut~output, HardFuzzyCtl, 1
+instance = comp, \TriggerPin~input , TriggerPin~input, HardFuzzyCtl, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, HardFuzzyCtl, 1
