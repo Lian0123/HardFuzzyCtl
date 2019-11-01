@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Aug 12 22:50:29 2019
+Analysis & Synthesis Status : Successful - Sat Nov  2 00:21:47 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : HardFuzzyCtl
-Top-level Entity Name : FuzzyMapping
+Top-level Entity Name : HardFuzzyCtl
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 19
+Total registers : 4
+Total pins : 88
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

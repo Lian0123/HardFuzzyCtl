@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "07/28/2019 14:48:01"
+// Generated on "11/02/2019 00:31:57"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          HardFuzzyCtl
 // 
@@ -29,25 +29,297 @@
 module HardFuzzyCtl_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg TriggerPin;
+reg clearError;
+reg clk;
+reg [1:0] ctlSave;
+reg [9:0] dev1;
+reg [9:0] dev2;
+reg [9:0] dev3;
 // wires                                               
-wire TestOut;
+wire [40:0] NeuralBus;
+wire [4:0] NeuralError;
+wire [2:0] OutBus;
+wire [4:0] OutErrorBus;
 
 // assign statements (if any)                          
 HardFuzzyCtl i1 (
 // port map - connection between master ports and signals/registers   
-	.TestOut(TestOut),
-	.TriggerPin(TriggerPin)
+	.NeuralBus(NeuralBus),
+	.NeuralError(NeuralError),
+	.OutBus(OutBus),
+	.OutErrorBus(OutErrorBus),
+	.clearError(clearError),
+	.clk(clk),
+	.ctlSave(ctlSave),
+	.dev1(dev1),
+	.dev2(dev2),
+	.dev3(dev3)
 );
 initial 
 begin 
-#1000000 $finish;
+#40000000 $finish;
 end 
 
-// TriggerPin
+// clearError
 initial
 begin
-	TriggerPin = 1'b0;
+	clearError = 1'b0;
+	clearError = #1280000 1'b1;
+	clearError = #2560000 1'b0;
+	clearError = #4800000 1'b1;
+	clearError = #1920000 1'b0;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #50000 1'b1;
+	#50000;
+end 
+// ctlSave[ 1 ]
+initial
+begin
+	ctlSave[1] = 1'b0;
+end 
+// ctlSave[ 0 ]
+initial
+begin
+	ctlSave[0] = 1'b0;
+end 
+// dev1[ 9 ]
+initial
+begin
+	dev1[9] = 1'b0;
+end 
+// dev1[ 8 ]
+initial
+begin
+	dev1[8] = 1'b0;
+end 
+// dev1[ 7 ]
+initial
+begin
+	dev1[7] = 1'b0;
+end 
+// dev1[ 6 ]
+initial
+begin
+	dev1[6] = 1'b0;
+end 
+// dev1[ 5 ]
+initial
+begin
+	dev1[5] = 1'b0;
+	dev1[5] = #640000 1'b1;
+	dev1[5] = #1280000 1'b0;
+end 
+// dev1[ 4 ]
+initial
+begin
+	dev1[4] = 1'b0;
+	dev1[4] = #240000 1'b1;
+	dev1[4] = #200000 1'b0;
+	dev1[4] = #200000 1'b1;
+	dev1[4] = #1280000 1'b0;
+end 
+// dev1[ 3 ]
+initial
+begin
+	dev1[3] = 1'b0;
+	dev1[3] = #640000 1'b1;
+	dev1[3] = #1280000 1'b0;
+	dev1[3] = #2080000 1'b1;
+	dev1[3] = #2640000 1'b0;
+end 
+// dev1[ 2 ]
+initial
+begin
+	dev1[2] = 1'b0;
+	dev1[2] = #640000 1'b1;
+	dev1[2] = #1280000 1'b0;
+	dev1[2] = #2880000 1'b1;
+	dev1[2] = #1440000 1'b0;
+	dev1[2] = #160000 1'b1;
+	dev1[2] = #240000 1'b0;
+end 
+// dev1[ 1 ]
+initial
+begin
+	dev1[1] = 1'b1;
+	dev1[1] = #200000 1'b0;
+	dev1[1] = #440000 1'b1;
+	dev1[1] = #1280000 1'b0;
+	dev1[1] = #960000 1'b1;
+	dev1[1] = #320000 1'b0;
+	dev1[1] = #80000 1'b1;
+	dev1[1] = #480000 1'b0;
+	dev1[1] = #240000 1'b1;
+	dev1[1] = #800000 1'b0;
+	dev1[1] = #640000 1'b1;
+	dev1[1] = #640000 1'b0;
+	dev1[1] = #320000 1'b1;
+	dev1[1] = #240000 1'b0;
+	dev1[1] = #12880000 1'b1;
+	dev1[1] = #1600000 1'b0;
+end 
+// dev1[ 0 ]
+initial
+begin
+	dev1[0] = 1'b1;
+	dev1[0] = #200000 1'b0;
+	dev1[0] = #440000 1'b1;
+	dev1[0] = #1280000 1'b0;
+	dev1[0] = #560000 1'b1;
+	dev1[0] = #400000 1'b0;
+	dev1[0] = #400000 1'b1;
+	dev1[0] = #480000 1'b0;
+	dev1[0] = #640000 1'b1;
+	dev1[0] = #400000 1'b0;
+	dev1[0] = #320000 1'b1;
+	dev1[0] = #320000 1'b0;
+	dev1[0] = #960000 1'b1;
+	dev1[0] = #240000 1'b0;
+	dev1[0] = #12240000 1'b1;
+	dev1[0] = #640000 1'b0;
+end 
+// dev2[ 9 ]
+initial
+begin
+	dev2[9] = 1'b0;
+	dev2[9] = #400000 1'b1;
+	dev2[9] = #600000 1'b0;
+end 
+// dev2[ 8 ]
+initial
+begin
+	dev2[8] = 1'b0;
+	dev2[8] = #400000 1'b1;
+	dev2[8] = #600000 1'b0;
+end 
+// dev2[ 7 ]
+initial
+begin
+	dev2[7] = 1'b0;
+	dev2[7] = #400000 1'b1;
+	dev2[7] = #600000 1'b0;
+end 
+// dev2[ 6 ]
+initial
+begin
+	dev2[6] = 1'b0;
+	dev2[6] = #400000 1'b1;
+	dev2[6] = #600000 1'b0;
+end 
+// dev2[ 5 ]
+initial
+begin
+	dev2[5] = 1'b0;
+	dev2[5] = #400000 1'b1;
+	dev2[5] = #600000 1'b0;
+end 
+// dev2[ 4 ]
+initial
+begin
+	dev2[4] = 1'b0;
+	dev2[4] = #400000 1'b1;
+	dev2[4] = #600000 1'b0;
+	dev2[4] = #6760000 1'b1;
+	dev2[4] = #1760000 1'b0;
+end 
+// dev2[ 3 ]
+initial
+begin
+	dev2[3] = 1'b0;
+	dev2[3] = #400000 1'b1;
+	dev2[3] = #600000 1'b0;
+	dev2[3] = #4760000 1'b1;
+	dev2[3] = #1600000 1'b0;
+end 
+// dev2[ 2 ]
+initial
+begin
+	dev2[2] = 1'b0;
+	dev2[2] = #400000 1'b1;
+	dev2[2] = #600000 1'b0;
+	dev2[2] = #1480000 1'b1;
+	dev2[2] = #960000 1'b0;
+	dev2[2] = #4880000 1'b1;
+	dev2[2] = #2560000 1'b0;
+	dev2[2] = #7680000 1'b1;
+	dev2[2] = #4480000 1'b0;
+end 
+// dev2[ 1 ]
+initial
+begin
+	dev2[1] = 1'b0;
+	dev2[1] = #400000 1'b1;
+	dev2[1] = #600000 1'b0;
+end 
+// dev2[ 0 ]
+initial
+begin
+	dev2[0] = 1'b0;
+	dev2[0] = #2480000 1'b1;
+	dev2[0] = #1280000 1'b0;
+	dev2[0] = #14800000 1'b1;
+	dev2[0] = #5120000 1'b0;
+end 
+// dev3[ 9 ]
+initial
+begin
+	dev3[9] = 1'b0;
+end 
+// dev3[ 8 ]
+initial
+begin
+	dev3[8] = 1'b0;
+end 
+// dev3[ 7 ]
+initial
+begin
+	dev3[7] = 1'b0;
+end 
+// dev3[ 6 ]
+initial
+begin
+	dev3[6] = 1'b0;
+end 
+// dev3[ 5 ]
+initial
+begin
+	dev3[5] = 1'b0;
+end 
+// dev3[ 4 ]
+initial
+begin
+	dev3[4] = 1'b0;
+end 
+// dev3[ 3 ]
+initial
+begin
+	dev3[3] = 1'b0;
+	dev3[3] = #7600000 1'b1;
+	dev3[3] = #4560000 1'b0;
+end 
+// dev3[ 2 ]
+initial
+begin
+	dev3[2] = 1'b0;
+end 
+// dev3[ 1 ]
+initial
+begin
+	dev3[1] = 1'b0;
+	dev3[1] = #7680000 1'b1;
+	dev3[1] = #3840000 1'b0;
+end 
+// dev3[ 0 ]
+initial
+begin
+	dev3[0] = 1'b0;
+	dev3[0] = #7680000 1'b1;
+	dev3[0] = #1920000 1'b0;
 end 
 endmodule
 

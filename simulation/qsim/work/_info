@@ -8,47 +8,91 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/lian/HardFuzzyCtl/simulation/qsim
-vHardFuzzyCtl
-!s110 1564296496
+vFuzzyMapping
+Z1 !s110 1572441385
 !i10b 1
-!s100 d<NJDn]`:JI4@WG^o68ki3
-I@1O@Kd7T`c8M@=ZFK6Oaj2
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s100 kVX_=D`iBAfFU@kM2>k]X0
+IQWzM7P4AU>QaeK6AVLd6m2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1564296490
-8HardFuzzyCtl.vo
-FHardFuzzyCtl.vo
-L0 31
-Z2 OV;L;10.5b;63
+w1572441382
+Z3 8HardFuzzyCtl.vo
+Z4 FHardFuzzyCtl.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z3 !s108 1564296496.000000
-!s107 HardFuzzyCtl.vo|
-!s90 -work|work|HardFuzzyCtl.vo|
+Z7 !s108 1572441385.000000
+Z8 !s107 HardFuzzyCtl.vo|
+Z9 !s90 -work|work|HardFuzzyCtl.vo|
 !i113 1
-Z4 o-work work
-Z5 tCvgOpt 0
-n@hard@fuzzy@ctl
-vHardFuzzyCtl_vlg_vec_tst
-!s110 1564296497
-!i10b 1
-!s100 hJA^2eJLLe73>X`>ccL<^3
-IVm<lNI]932FFXfLJFPh>I3
+Z10 o-work work
+Z11 tCvgOpt 0
+n@fuzzy@mapping
+vFuzzyMapping_vlg_vec_tst
 R1
-R0
-w1564296482
-8Waveform1.vwf.vt
-FWaveform1.vwf.vt
-L0 29
+!i10b 1
+!s100 zCZ2AAQ@OIb4jkQWRc`P_1
+I<Y5@B[Uo:JVd0dB<bU4Qo3
 R2
+R0
+w1572441375
+Z12 8Waveform1.vwf.vt
+Z13 FWaveform1.vwf.vt
+Z14 L0 29
+R6
 r1
 !s85 0
 31
-R3
+R7
 !s107 Waveform1.vwf.vt|
-!s90 -work|work|Waveform1.vwf.vt|
+Z15 !s90 -work|work|Waveform1.vwf.vt|
 !i113 1
+R10
+R11
+n@fuzzy@mapping_vlg_vec_tst
+vHardFuzzyCtl
+!s110 1572625928
+!i10b 1
+!s100 gJi0ZZzV?X27<N>zUoJWT2
+Ig<EZH>OF7T0eSKXj6cA;J0
+R2
+R0
+w1572625925
+R3
 R4
 R5
+R6
+r1
+!s85 0
+31
+Z16 !s108 1572625928.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@hard@fuzzy@ctl
+vHardFuzzyCtl_vlg_vec_tst
+!s110 1572625929
+!i10b 1
+!s100 JSUbA6N[_J]L1kLQDacK[0
+IG4Ii@4D7LH3JZ>8VmXAnJ2
+R2
+R0
+w1572625918
+R12
+R13
+R14
+R6
+r1
+!s85 0
+31
+R16
+!s107 Waveform1.vwf.vt|
+R15
+!i113 1
+R10
+R11
 n@hard@fuzzy@ctl_vlg_vec_tst

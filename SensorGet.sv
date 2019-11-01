@@ -30,10 +30,11 @@ module SensorGet(SensorGetValue, FixedValue, ErrorReturn);
 	// Alway Comb Event
 	//==========================================================================================================
 	always@(*) begin
+		ErrorReturn = 2'b00;
 		Tester = SensorGetValue - 0;
 		
 		//Out Max/Min Range Error		
-		if(BaseUpBound > Tester || BaseDownBound < Tester )
+		if(BaseUpBound < Tester || BaseDownBound > Tester )
 			ErrorReturn[0] = 1'b1;
 			
 		//Out Overflow Error

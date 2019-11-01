@@ -85,14 +85,12 @@ module FuzzyMapping(InFixed,IsHit,LoaclFlag,LongBitData,ErrorReturn);
 		FN[3] = Node3 * LongBit_limit;
 		
 		/* Test InFix*/
-		if(InFixed < 0) begin
+		if(InFixed < 0)
 			ErrorReturn = 1;
-		end
-		
+			
 		/* OutRange Test */
-		if(Tmp < FN[0] || Tmp > FN[i][3]) begin
+		if(Tmp > FN[0] || Tmp < FN[3])
 			IsHit = 1;
-		end
 		
 		/* UpPart Mapping Test */
 		if(FN[0] <= Tmp && Tmp <= FN[1]) begin

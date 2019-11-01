@@ -4,71 +4,147 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "LoaclFlag[0]",
+					"name" : "OutBus[0]",
 					"strict" : false
 				},
 				{
-					"name" : "LoaclFlag[1]",
+					"name" : "OutBus[1]",
 					"strict" : false
 				},
 				{
-					"name" : "LoaclFlag[2]",
+					"name" : "OutBus[2]",
 					"strict" : false
 				},
 				{
-					"name" : "LongBitData[0]",
+					"name" : "OutErrorBus[0]",
 					"strict" : false
 				},
 				{
-					"name" : "LongBitData[1]",
+					"name" : "dev1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "LongBitData[2]",
+					"name" : "dev2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "LongBitData[3]",
+					"name" : "dev2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "LongBitData[4]",
+					"name" : "dev2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "LongBitData[5]",
+					"name" : "dev2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "LongBitData[6]",
+					"name" : "dev1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "LongBitData[7]",
+					"name" : "dev1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "LongBitData[8]",
+					"name" : "dev1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "LongBitData[9]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "InFixed[1]",
+					"name" : "dev3[1]",
 					"strict" : false
 				},
 				{
-					"name" : "InFixed[2]",
+					"name" : "dev3[2]",
 					"strict" : false
 				},
 				{
-					"name" : "InFixed[3]",
+					"name" : "dev3[3]",
 					"strict" : false
 				},
 				{
-					"name" : "InFixed[0]",
+					"name" : "dev3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clearError",
+					"strict" : false
+				},
+				{
+					"name" : "dev3[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dev3[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dev3[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dev3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dev2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dev2[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dev2[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dev2[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dev3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dev2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dev3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dev1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dev2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dev1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dev1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dev1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dev1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dev1[8]",
 					"strict" : false
 				}
 			]

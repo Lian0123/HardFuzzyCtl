@@ -1,13 +1,13 @@
-Fitter Status : Successful - Mon Aug 12 22:52:11 2019
+Fitter Status : Successful - Sat Nov  2 00:24:04 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : HardFuzzyCtl
-Top-level Entity Name : FuzzyMapping
+Top-level Entity Name : HardFuzzyCtl
 Family : Cyclone V
 Device : 5CGXBC5C7F27C8
 Timing Models : Final
-Logic utilization (in ALMs) : 59 / 29,080 ( < 1 % )
-Total registers : 0
-Total pins : 19 / 364 ( 5 % )
+Logic utilization (in ALMs) : 145 / 29,080 ( < 1 % )
+Total registers : 4
+Total pins : 88 / 364 ( 24 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,567,040 ( 0 % )
 Total RAM Blocks : 0 / 446 ( 0 % )
