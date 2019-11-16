@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sat Nov  2 00:21:47 2019
+Analysis & Synthesis Status : Successful - Sat Nov 16 13:39:04 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : HardFuzzyCtl
 Top-level Entity Name : HardFuzzyCtl
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 4
-Total pins : 88
+Total registers : 7
+Total pins : 68
 Total virtual pins : 0
 Total block memory bits : 0
-Total DSP Blocks : 0
+Total DSP Blocks : 9
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

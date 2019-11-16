@@ -1,5 +1,5 @@
 Flow report for HardFuzzyCtl
-Sat Nov  2 00:32:05 2019
+Sat Nov 16 16:00:13 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,19 +40,19 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Nov  2 00:32:05 2019       ;
+; Flow Status                     ; Successful - Sat Nov 16 16:00:13 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; HardFuzzyCtl                                ;
 ; Top-level Entity Name           ; HardFuzzyCtl                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXBC5C7F27C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 145 / 29,080 ( < 1 % )                      ;
-; Total registers                 ; 4                                           ;
-; Total pins                      ; 88 / 364 ( 24 % )                           ;
+; Logic utilization (in ALMs)     ; 643 / 29,080 ( 2 % )                        ;
+; Total registers                 ; 7                                           ;
+; Total pins                      ; 68 / 364 ( 19 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,567,040 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 150 ( 0 % )                             ;
+; Total DSP Blocks                ; 9 / 150 ( 6 % )                             ;
 ; Total HSSI RX PCSs              ; 0 / 6 ( 0 % )                               ;
 ; Total HSSI PMA RX Deserializers ; 0 / 6 ( 0 % )                               ;
 ; Total HSSI TX PCSs              ; 0 / 6 ( 0 % )                               ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/02/2019 00:20:58 ;
+; Start date & time ; 11/16/2019 13:37:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; HardFuzzyCtl        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 207732453162284.157262525833001        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 207732453162284.157388267429166        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -100,14 +100,16 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:49     ; 1.0                     ; 988 MB              ; 00:01:46                           ;
-; Fitter               ; 00:02:15     ; 1.0                     ; 2254 MB             ; 00:03:20                           ;
-; Assembler            ; 00:00:24     ; 1.0                     ; 947 MB              ; 00:00:24                           ;
-; Timing Analyzer      ; 00:00:27     ; 1.1                     ; 1207 MB             ; 00:00:27                           ;
-; EDA Netlist Writer   ; 00:00:06     ; 1.0                     ; 1121 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 1099 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 1102 MB             ; 00:00:05                           ;
-; Total                ; 00:04:11     ; --                      ; --                  ; 00:06:12                           ;
+; Analysis & Synthesis ; 00:01:09     ; 1.0                     ; 975 MB              ; 00:01:48                           ;
+; Fitter               ; 00:02:33     ; 1.1                     ; 2257 MB             ; 00:03:51                           ;
+; Assembler            ; 00:00:29     ; 1.0                     ; 956 MB              ; 00:00:25                           ;
+; Timing Analyzer      ; 00:00:25     ; 1.3                     ; 1199 MB             ; 00:00:29                           ;
+; EDA Netlist Writer   ; 00:00:07     ; 1.0                     ; 1134 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 1106 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:06     ; 1.0                     ; 1113 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 1105 MB             ; 00:00:05                           ;
+; EDA Netlist Writer   ; 00:00:06     ; 1.0                     ; 1111 MB             ; 00:00:06                           ;
+; Total                ; 00:05:05     ; --                      ; --                  ; 00:07:01                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -123,6 +125,8 @@ refer to the applicable agreement for further details.
 ; EDA Netlist Writer   ; archlabs         ; Arch Linux ; Arch Linux ; x86_64         ;
 ; EDA Netlist Writer   ; archlabs         ; Arch Linux ; Arch Linux ; x86_64         ;
 ; EDA Netlist Writer   ; archlabs         ; Arch Linux ; Arch Linux ; x86_64         ;
+; EDA Netlist Writer   ; archlabs         ; Arch Linux ; Arch Linux ; x86_64         ;
+; EDA Netlist Writer   ; archlabs         ; Arch Linux ; Arch Linux ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -134,6 +138,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off HardFuzzyCtl -c
 quartus_asm --read_settings_files=off --write_settings_files=off HardFuzzyCtl -c HardFuzzyCtl
 quartus_sta HardFuzzyCtl -c HardFuzzyCtl
 quartus_eda --read_settings_files=off --write_settings_files=off HardFuzzyCtl -c HardFuzzyCtl
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off HardFuzzyCtl -c HardFuzzyCtl --vector_source=/home/lian/HardFuzzyCtl/Waveform1.vwf --testbench_file=/home/lian/HardFuzzyCtl/simulation/qsim/Waveform1.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=/home/lian/HardFuzzyCtl/simulation/qsim/ HardFuzzyCtl -c HardFuzzyCtl
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off HardFuzzyCtl -c HardFuzzyCtl --vector_source=/home/lian/HardFuzzyCtl/Waveform1.vwf --testbench_file=/home/lian/HardFuzzyCtl/simulation/qsim/Waveform1.vwf.vt
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=/home/lian/HardFuzzyCtl/simulation/qsim/ HardFuzzyCtl -c HardFuzzyCtl
 
