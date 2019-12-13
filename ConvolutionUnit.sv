@@ -36,7 +36,11 @@
 			for(j=0;j<Row_Limit-WindowsSize+1;j=j+1) begin
 				for(m=0;m<WindowsSize;m=m+1) begin
 					for(n=0;n<WindowsSize;n=n+1) begin
-						 {OutMatrix[4*WindowsSize*WindowsSize+i*WindowsSize+j],OutMatrix[3*WindowsSize*WindowsSize+i*WindowsSize+j],OutMatrix[2*WindowsSize*WindowsSize+i*WindowsSize+j],OutMatrix[1*WindowsSize*WindowsSize+i*WindowsSize+j],OutMatrix[0*WindowsSize*WindowsSize+i*WindowsSize+j]} = {InMatrix[4*Row_Limit*Row_Limit+i*Row_Limit+j],InMatrix[3*Row_Limit*Row_Limit+i*Row_Limit+j],InMatrix[2*Row_Limit*Row_Limit+i*Row_Limit+j],InMatrix[1*Row_Limit*Row_Limit+i*Row_Limit+j],InMatrix[0*Row_Limit*Row_Limit+i*Row_Limit+j]} & EigenMatrix[m*WindowsSize+n];
+						 OutMatrix[0*WindowsSize*WindowsSize+i*WindowsSize+j] = (InMatrix[0*Row_Limit*Row_Limit+i*Row_Limit+j] & EigenMatrix[m*WindowsSize+n]);
+						 OutMatrix[1*WindowsSize*WindowsSize+i*WindowsSize+j] = (InMatrix[1*Row_Limit*Row_Limit+i*Row_Limit+j] & EigenMatrix[m*WindowsSize+n]) ^ (EigenMatrix[m*WindowsSize+n] ^ InMatrix[0*Row_Limit*Row_Limit+i*Row_Limit+j]);
+						 OutMatrix[2*WindowsSize*WindowsSize+i*WindowsSize+j] = (InMatrix[2*Row_Limit*Row_Limit+i*Row_Limit+j] & EigenMatrix[m*WindowsSize+n]) ^ (EigenMatrix[m*WindowsSize+n] ^ InMatrix[1*Row_Limit*Row_Limit+i*Row_Limit+j]);
+						 OutMatrix[3*WindowsSize*WindowsSize+i*WindowsSize+j] = (InMatrix[3*Row_Limit*Row_Limit+i*Row_Limit+j] & EigenMatrix[m*WindowsSize+n]) ^ (EigenMatrix[m*WindowsSize+n] ^ InMatrix[2*Row_Limit*Row_Limit+i*Row_Limit+j]);
+						 OutMatrix[4*WindowsSize*WindowsSize+i*WindowsSize+j] = (InMatrix[4*Row_Limit*Row_Limit+i*Row_Limit+j] & EigenMatrix[m*WindowsSize+n]) ^ (EigenMatrix[m*WindowsSize+n] ^ InMatrix[3*Row_Limit*Row_Limit+i*Row_Limit+j]);
 					end
 				end
 			end
